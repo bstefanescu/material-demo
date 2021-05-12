@@ -24,7 +24,7 @@
     "pretest": "npx rollup -c .qute/rollup.config.js --environment NODE_ENV:test",
     "test": "npx mocha --require source-map-support/register .qute/build/test-bundle.js"
   },
-  "author": "",
+  "author": "Bogdan Stefanescu <bogdan@quandora.com>",
   "license": "MIT",
   "devDependencies": {
     "@qutejs/rollup-plugin-qute": "^2.0.0-beta.9",
