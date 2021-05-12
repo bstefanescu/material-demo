@@ -1,0 +1,9 @@
+import {mButton} from '@qutejs/material/button';
+
+<q:template export>
+<div>
+    <m:button variant='primary' @click='openToaster'>Show Toaster</m:button>
+    <input type='checkbox' @change='e => setToastOnTop(e.target.checked)'> Show toast on top
+
+</div>
+</q:template>

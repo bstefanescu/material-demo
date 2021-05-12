@@ -1,0 +1,11 @@
+import { mSwitch } from '@qutejs/material/switch';
+import { mBox } from '@qutejs/material/box';
+
+
+<q:template export>
+<div>
+    <m:box outline>
+        <m:switch label='on / off' checked />
+    </m:box>
+</div>
+</q:template>

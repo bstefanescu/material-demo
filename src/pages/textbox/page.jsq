@@ -1,0 +1,32 @@
+import { mTabs, mTab} from '@qutejs/material/tabs';
+import { mTextbox } from '@qutejs/material/textbox';
+import { mBox } from '@qutejs/material/box';
+import { qModel } from '@qutejs/form';
+
+import { mIcon } from '@qutejs/material/icon';
+import { mButton } from '@qutejs/material/button';
+
+<q:template export>
+<div>
+    <m:box outline>
+    <div>
+    <b>Options:</b>
+        <input type='checkbox' @change={e => leftIcon=e.target.checked?'search':null}> Left icon
+        <input type='checkbox' @change={e => rightIcon=e.target.checked?'keyboard_arrow_down':null} >Right icon
+    </div>
+    </m:box>
+    <m:tabs q:model='variant'>
+        <m:tab name='filled' label='Filled'></m:tab>
+        <m:tab name='outlined' label='Outlined'></m:tab>
+    </m:tabs>
+    <m:box outline>
+        <div>
+        <if value={variant === 'outlined'}>
+            <m:textbox label='Username' left-icon={leftIcon} right-icon={rightIcon}  outline />
+        <else/>
+            <m:textbox label='Username' left-icon={leftIcon} right-icon={rightIcon} />
+        </if>
+        </div>
+    </m:box>
+</div>
+</q:template>

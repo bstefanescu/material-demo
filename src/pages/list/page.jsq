@@ -1,0 +1,18 @@
+import { mTabs, mTab } from '@qutejs/material/tabs';
+import { mList, mListItem } from '@qutejs/material/list';
+import { mBox } from '@qutejs/material/box';
+import { mIcon } from '@qutejs/material/icon';
+
+<q:template export>
+<div>
+    <m:box outline>
+        <m:list>
+            <m:list-item value='create' icon='create' label='Create'/>
+            <m:list-item value='archive' icon='archive' label='Archive'/>
+            <m:list-item value='delete' icon='delete' label='Remove'/>
+            <m:list-item value='pageview1' icon='pageview' label='Find'/>
+            <m:list-item value='pageview2' icon='pageview' label='Find'>Custom item <m:icon class='push'>arrow_right</m:icon></m:list-item>
+        </m:list>
+    </m:box>
+</div>
+</q:template>

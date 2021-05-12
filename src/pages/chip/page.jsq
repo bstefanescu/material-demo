@@ -1,0 +1,42 @@
+import window from '@qutejs/window';
+import { ChoiceGroup, qChoice } from '@qutejs/form';
+import { mChip, mActionChip, mChoiceChip } from '@qutejs/material/chip';
+import { mBox } from '@qutejs/material/box';
+
+
+<q:template export>
+<div>
+    <h2>The Chip Component</h2>
+    <m:box outline>
+
+        <div style='display:flex; margin: 5px 0'>
+            <m:chip label='Programming' icon='text_snippet'/>
+            <m:chip label='Programming' icon='tag' outline/>
+        </div>
+
+        <div style='display:flex; margin: 5px 0'>
+            <m:action-chip label='Programming' icon='text_snippet'/>
+            <m:action-chip label='Programming' outline/>
+        </div>
+
+        <div style='display:flex; margin: 5px 0'>
+            <m:action-chip closeable label='Test' icon='bookmark' @click='window.alert("click!")' @close='window.alert("close")'/>
+            <m:action-chip closeable label='Programming' icon='tag' outline/>
+        </div>
+
+
+        <div style='display:flex; margin: 5px 0'>
+            <m:choice-chip value='1' value='2' label='Programming' />
+            <m:choice-chip label='Programming' outline/>
+        </div>
+
+        <div>
+            <choice-group style='display:flex; margin: 5px 0'>
+                <m:choice-chip value='male' label='Male' q:choice />
+                <m:choice-chip value='female' label='Female' q:choice />
+            </choice-group>
+        </div>
+
+    </m:box>
+</div>
+</q:template>

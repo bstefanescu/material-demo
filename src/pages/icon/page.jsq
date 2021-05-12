@@ -1,0 +1,23 @@
+import { mTabs, mTab} from '@qutejs/material/tabs';
+import { mTextarea } from '@qutejs/material/textarea';
+import { mBox } from '@qutejs/material/box';
+
+import mCheckIcon from '@qutejs/material/icons/check';
+import mTimesIcon from '@qutejs/material/icons/times';
+
+<q:template export>
+    <div>
+        <h2>The Icon Component</h2>
+        Used to wrap a material icon.
+
+        <button @click='testCheckIcon'>Test</button>
+        <hr>
+
+        <label><m:check-icon/> Bla Bla</label>
+
+        <hr>
+
+        <m:times-icon/>
+
+    </div>
+</q:template>

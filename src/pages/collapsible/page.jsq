@@ -1,0 +1,54 @@
+import { ChoiceGroup, qChoice } from '@qutejs/form';
+import { mTabs, mTab} from '@qutejs/material/tabs';
+import { mCollapsible } from '@qutejs/material/collapsible';
+import { mBox } from '@qutejs/material/box';
+import { qModel } from '@qutejs/form';
+
+
+<q:template export>
+<div>
+    <m:tabs q:model='variant'>
+        <m:tab name='default' label='Default'></m:tab>
+        <m:tab name='left' label='Chevron Left'></m:tab>
+        <m:tab name='right' label='Chevron Right'></m:tab>
+    </m:tabs>
+    <m:box outline>
+        <div>
+        <if value={variant==='default'}>
+            <m:collapsible title='My Section' expanded>
+                <div>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </m:collapsible>
+        <else-if value={variant==='left'}>
+            <m:collapsible title='My Section' chevron='left' expanded>
+                <div>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </m:collapsible>
+        <else>
+             <m:collapsible title='My Section' chevron='right' expanded>
+                <div>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </m:collapsible>
+        </if>
+
+        </div>
+    </m:box>
+
+    <h2>Accordion</h2>
+
+    <choice-group>
+        <m:collapsible value='section1' chevron='left' title='Section 1' q:choice>
+        <p>Section 1 content </p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </m:collapsible>
+        <m:collapsible value='section2' chevron='left' title='Section 2' q:choice>
+        <p>Section 2 content</p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </m:collapsible>
+    </choice-group>
+
+</div>
+</q:template>

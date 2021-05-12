@@ -1,0 +1,46 @@
+import { mRailMenu, mRailItem } from '@qutejs/material/rail';
+
+import { mBox }from '@qutejs/material/box';
+import { mButton } from '@qutejs/material/button';
+
+<q:style>
+.menu-page {
+    white-space: nowrap; width: 250px;
+}
+</q:style>
+
+<q:template name='TrashMenu'>
+    <div class='menu-page'>
+     This is the content of the trash!
+    </div>
+</q:template>
+
+<q:template name='AlarmMenu'>
+    <div class='menu-page'>
+     Your defined alarms!
+    </div>
+</q:template>
+
+<q:template name='SetupMenu'>
+    <div class='menu-page'>
+     Setup Menu
+    </div>
+</q:template>
+
+<q:template export import='AlarmMenu,TrashMenu,SetupMenu'>
+<div>
+    <h3>Navigation Rail</h3>
+    <div style='width:600px;height:400px;position:absolute;background:lightgray;display:flex;border:1px solid #e0e0e0' @navigation='handleNavigation'>
+        <m:rail-menu>
+            <m:rail-item icon='delete' menu={TrashMenu} />
+            <m:rail-item icon='alarm' menu={AlarmMenu} />
+            <m:rail-item icon='link' value='somePage' />
+            <m:rail-item icon='build' menu={SetupMenu} class='push' />
+        </m:rail-menu>
+        <div style='flex:1;padding: 10px 10px; background:white'>
+        Some content
+        </div>
+    </div>
+
+</div>
+</q:template>

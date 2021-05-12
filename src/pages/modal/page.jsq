@@ -1,0 +1,21 @@
+import { mModal, mModalTrigger } from '@qutejs/material/modal';
+import { mBox } from '@qutejs/material/box';
+import { mButton } from '@qutejs/material/button';
+
+<q:template export>
+<div>
+
+    <m:button variant='primary' m:modal-trigger='my-modal'>Open Modal</m:button>
+
+    <m:modal id='my-modal' animation='scale-up' height='50px' @action='onModalAction'>
+        <nested name='header'>My header</nested>
+        <nested name='body'>
+        My Body!!
+        </nested>
+        <nested name='actions'>
+        <m:button data-modal-action='close'>Cancel</m:button>
+        <m:button data-modal-action='ok'>Ok</m:button>
+        </nested>
+    </m:modal>
+</div>
+</q:template>

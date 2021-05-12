@@ -1,0 +1,11 @@
+
+/* My App rules */
+
+.my-demo {
+    background: green;
+}
+
+.my-demo.is-info {
+    font-size: 14px;
+    color: blue;
+}

@@ -1,0 +1,39 @@
+import { mTabs, mTab} from '@qutejs/material/tabs';
+import { mSelect } from '@qutejs/material/select';
+import { mBox } from '@qutejs/material/box';
+import { mButton } from '@qutejs/material/button';
+import { qModel } from '@qutejs/form';
+import { mIcon } from '@qutejs/material/icon';
+import '@qutejs/material/icons/dropdown';
+
+<q:template export>
+<div>
+    <m:tabs q:model='variant'>
+        <m:tab name='filled' label='Filled'></m:tab>
+        <m:tab name='outlined' label='Outlined'></m:tab>
+    </m:tabs>
+
+<h3>Single Select</h3>
+    <m:box outline>
+        <div>
+        <if value={variant === 'outlined'}>
+        <m:select label='City' dropdown-title='Select a City' options={items} outline @change='selectionChanged'></m:select>
+        <else/>
+        <m:select value={items[2]} label='City' dropdown-title='Select a City' options={items} @change='selectionChanged'></m:select>
+        </if>
+        </div>
+    </m:box>
+
+<h3>Multiple Select</h3>
+    <m:box outline>
+        <div>
+        <if value={variant === 'outlined'}>
+        <m:select label='City' dropdown-title='Select a City' options={items} outline @change='selectionChanged' multiple></m:select>
+        <else/>
+        <m:select value={items.slice(1,3)} label='City' dropdown-title='Select a City' options={items} @change='selectionChanged' multiple></m:select>
+        </if>
+        </div>
+    </m:box>
+
+</div>
+</q:template>

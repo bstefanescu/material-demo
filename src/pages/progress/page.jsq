@@ -1,0 +1,19 @@
+import { mProgress } from '@qutejs/material/progress';
+import { mButton } from '@qutejs/material/button';
+import { mBox } from '@qutejs/material/box';
+import { qModel } from '@qutejs/form';
+
+
+<q:template export>
+<div>
+    <h2>The Progress Component</h2>
+    <m:box outline>
+        <div>
+            <m:progress value={progressValue}/>
+            <m:button variant='secondary' label='Start Determined Progress' @click='startDeterminedProgress' style='margin: 10px auto'></m:button>
+            <m:button variant='secondary' label='Start Undetermined Progress' @click='startUndeterminedProgress' style='margin: 10px auto'></m:button>
+            <m:button variant='secondary' label='Reset' @click='resetProgress' style='margin: 10px auto'></m:button>
+        </div>
+    </m:box>
+</div>
+</q:template>

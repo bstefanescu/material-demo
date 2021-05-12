@@ -1,0 +1,17 @@
+import { mButton } from '@qutejs/material/button';
+import { mList, mListItem } from '@qutejs/material/list';
+import { mDivider } from '@qutejs/material/divider';
+
+<q:template export>
+
+    <m:list q:async-emit-navigate-onchange={ e => '#'+e.detail.value } style='width:250px;'>
+    <div>
+        <m:list-item value='bla'><h3>Header Item</h3></m:list-item>
+        <m:divider/>
+        <for value={page in pages}>
+            <m:list-item value={page.id} label={page.label} />
+        </for>
+    </div>
+    </m:list>
+
+</q:template>

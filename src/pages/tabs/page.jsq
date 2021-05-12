@@ -1,0 +1,18 @@
+import { qModel } from '@qutejs/form';
+import { mTabs, mTab} from '@qutejs/material/tabs';
+import { mBox } from '@qutejs/material/box';
+
+<q:template export>
+    <div>
+        <h2>The Tabs Component</h2>
+
+        <m:tabs q:model='activeTab'>
+            <m:tab name='tab1' label='Tab 1'/>
+            <m:tab name='tab2' label='Tab 2' />
+            <m:tab name='tab3' label='Tab 3' />
+        </m:tabs>
+
+        <hr>
+        <div style=''>Active tab: {{activeTab}}</div>
+    </div>
+</q:template>

@@ -1,0 +1,28 @@
+import {mIconButton} from '@qutejs/material/icon-button';
+import Sidebar from '../sidebar';
+import { mDrawerToggle, mDrawer } from '@qutejs/material/drawer';
+import { mApp, mAppPage, mAppSidebar } from '@qutejs/material/app';
+
+<q:style>
+.qm-Drawer-toggle:hover {
+    opacity: .8;
+}
+</q:style>
+
+<q:template export>
+    <m:app>
+        <nested name='header'>
+            <m:icon-button m:drawer-toggle icon='menu' rounded class='qm-Drawer-toggle'/>
+            <div>The title</div>
+            <div>Right nav</div>
+        </nested>
+        <nested>
+        <m:app-sidebar m:drawer>
+            <Sidebar pages={pageList} />
+        </m:app-sidebar>
+        <m:app-page>
+            <div style='padding:5px 10px;'><view is={currentPage} /></div>
+        </m:app-page>
+        </nested>
+    </m:app>
+</q:template>

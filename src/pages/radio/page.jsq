@@ -1,0 +1,12 @@
+import { mRadio } from '@qutejs/material/radio';
+import { mBox } from '@qutejs/material/box';
+
+<q:template export>
+<div>
+    <m:box outline>
+        <m:radio label='Check my radio 1' name='myradio' value='1' />
+        <m:radio label='Check my radio 2' name='myradio' value='2' />
+        <m:radio label='Check my radio 3' name='myradio' value='3' checked />
+    </m:box>
+</div>
+</q:template>

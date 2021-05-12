@@ -1,0 +1,12 @@
+import { mSlider } from '@qutejs/material/slider';
+import { mBox } from '@qutejs/material/box';
+
+
+<q:template export>
+<div>
+    <h2>The Slider Component</h2>
+    <m:box outline>
+        <m:slider tooltip min='0' max='100' step='1' width='auto' />
+    </m:box>
+</div>
+</q:template>

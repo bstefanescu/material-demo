@@ -1,0 +1,20 @@
+import { mSpinner } from '@qutejs/material/spinner';
+import { mBox } from '@qutejs/material/box';
+
+
+<q:template export>
+<div>
+    <h2>The Spinner Component</h2>
+    <m:box outline>
+    <div class="grid" style='width:100%'>
+        <div class="col-6">
+            <m:spinner q:show={_show}/>
+        </div>
+        <div class="col-6" style='background-color: #EDEDED'>
+            <button @click={e=>{_show = !_show}}>Toggle Spinner</button>
+            TODO
+        </div>
+    </div>
+    </m:box>
+</div>
+</q:template>

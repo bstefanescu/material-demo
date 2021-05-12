@@ -1,0 +1,22 @@
+import { mBox } from '@qutejs/material/box';
+import { mDatePicker } from '@qutejs/material/date-picker';
+import { mDateInput } from '@qutejs/material/date-input';
+import { qModel } from "@qutejs/form";
+
+<q:template export>
+<div>
+
+    <h3>Date input</h3>
+
+    <m:date-input class='qm-DatePicker--outline' label='Birthday' left-icon='today' outline pattern='d / m / y' noinput/>
+
+    <h3>Date Picker</h3>
+
+    <m:date-picker outline q:model='selectedDate'></m:date-picker>
+
+    <div>
+        Selected date: {{prettySelectedDate}}
+    </div>
+
+</div>
+</q:template>

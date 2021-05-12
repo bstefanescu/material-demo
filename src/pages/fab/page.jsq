@@ -1,0 +1,25 @@
+import { qModel } from '@qutejs/form';
+import { mFab } from '@qutejs/material/fab';
+// we need the hamburger icon provider
+import '@qutejs/material/icons/hamburger';
+
+<q:style>
+.fixed-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+</q:style>
+
+
+<q:template export>
+<div>
+    <h2>Floating Action Button</h2>
+
+    Menu opening direction:
+    <label><input type='radio' name='direction' value='left' q:model='direction' /> Left</label>
+    <label><input type='radio' name='direction' value='top' q:model='direction' />  Top</label>
+
+    <m:fab class='fixed-fab' direction={direction} icon='qm:hamburger' items={fabItems} />
+</div>
+</q:template>
