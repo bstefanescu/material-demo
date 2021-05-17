@@ -5,6 +5,7 @@ const testMode = process.env.NODE_ENV === 'test';
 
 const build = new BuildConfig({
 	componentName: "QuteMaterialDocs",
+	moduleName: 'qute-material-demo',
 	devServerPort: parseInt(process.env.DEV_SERVER_PORT)
 });
 
